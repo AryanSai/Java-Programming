@@ -79,7 +79,8 @@ public class Validator1{
         return d;
     }
 
-    public static char getChar(){
+    public static char getChar(String prompt){
+        System.out.println(prompt);
         Scanner sc = new Scanner(System.in);
         char ch = sc.next().charAt(0);
         return ch;

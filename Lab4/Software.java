@@ -1,12 +1,11 @@
 public class Software extends Product{
     String version; 
 
-    public Software(String _code, String _description, Double _price,String _version, String[] _tags){
+    public Software(String _code, String _description, Double _price,String _version){
         setCode(_code);
         setDescription(_description);
         setPrice(_price);
         setVersion(_version);
-        setTags(_tags);
     }
 
     public void setVersion(String _version){

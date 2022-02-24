@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class ProductApp{
     public static void main(String args[]){
-        char ch='y'; int index=0;
+        char ch='y',tagChar; int index=0;
         //array of products
         Product createdProducts[]= new Product[10];
         
@@ -10,14 +10,18 @@ public class ProductApp{
             if(p==null){  //added the required else block in the productDB class
                 System.out.println("No product matches this product code.");   
             }else{
+                tagChar = Validator1.getChar("Do you want to add tags?(y): ");
+                while(tagChar == 'y'){
+                    p.setTags(Validator1.getString("Enter the tag: "));
+                    tagChar = Validator1.getChar("Do you want to continue?(y): ");
+                }
                 createdProducts[index]=p;
                 index++;
                 System.out.println("Product added to the array.");
             }
             Arrays.sort(createdProducts,0,index);
             
-            System.out.println("Type 'y' to Continue:");
-            ch = Validator1.getChar();   //written a new function for getting characters 
+            ch = Validator1.getChar("Type 'y' to Continue:");   //written a new function for getting characters 
         }while(ch == 'y');
 
         //printing the elements from the array

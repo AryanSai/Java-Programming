@@ -1,12 +1,11 @@
 public class Book extends Product{
     String author;
 
-    public Book(String _code, String _description, Double _price,String _author, String[] _tags){
+    public Book(String _code, String _description, Double _price,String _author){
         setCode(_code);
         setDescription(_description);
         setPrice(_price);
         setAuthor(_author);
-        setTags(_tags);
     }
 
     public void setAuthor(String _author){
