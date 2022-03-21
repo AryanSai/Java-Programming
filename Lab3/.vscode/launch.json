@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ProductApp",
+            "request": "launch",
+            "mainClass": "ProductApp",
+            "projectName": "Lab3_6bee12b1"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
